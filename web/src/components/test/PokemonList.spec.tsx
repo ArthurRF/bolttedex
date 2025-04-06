@@ -16,7 +16,7 @@ describe("PokemonList", () => {
         name: "pikachu",
         frontImage: "https://example.com/front.png",
         backImage: "https://example.com/back.png",
-        type: "electric",
+        types: ["electric"],
         region: "kanto",
         weaknesses: ["ground"],
       },
