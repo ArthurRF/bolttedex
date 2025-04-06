@@ -51,10 +51,9 @@ This command will spin up both the frontend and backend services.
 ## 🔧 API Testing
 If you'd like to run the API tests:
 1. Open the `api` directory by running `cd api`.
-2. Create a `.env` file in the `api` directory.
-3. Copy the environment variables from `.env.example` to `.env` using the command `cp .env.example .env`.
-4. Run `npm install`
-5. Run the tests using `npm test`.
+2. Copy the environment variables from `.env.example` to `.env` using the command `cp .env.example .env`.
+3. Run `npm install`
+4. Run the tests using `npm test`.
 
 ---
 
