@@ -3,19 +3,19 @@ export type PokemonListType = {
   name: string;
   frontImage: string;
   backImage: string;
-  types: Array<string>;
+  types: string[];
   region: string;
-  weaknesses: Array<string>;
+  weaknesses: string[];
 };
 
 export type PokemonDetailsType = {
   id: number;
   name: string;
-  types: Array<string>;
+  types: string[];
   sprites: {
     front: string;
     back: string;
   };
   region: string;
-  weaknesses: Array<string>;
+  weaknesses: string[];
 };
