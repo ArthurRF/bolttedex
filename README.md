@@ -18,14 +18,14 @@ Ensure you have the following tools installed:
 
 ### Clone the Repository using SSH
 ```bash
-git clone git@github.com:ArthurRF/bet-system.git
-cd bet-system
+git clone git@github.com:ArthurRF/bolttedex.git
+cd bolttedex
 ```
 
 ### Or Clone the Repository using HTTPS
 ```bash
-git clone https://github.com/ArthurRF/bet-system.git
-cd bet-system
+git clone https://github.com/ArthurRF/bolttedex.git
+cd bolttedex
 ```
 
 ### Run the Project
