@@ -1,0 +1,39 @@
+version: '3'
+services:
+  redis:
+    image: "redis:latest"
+    container_name: "pokemon-redis"
+    command: redis-server --requirepass pokemon
+    ports:
+      - "6379:6379"
+
+  api:
+    build: ./api
+    container_name: "pokemon-api"
+    ports:
+      - "4000:4000"
+    environment:
+      - PORT=4000
+      - POKE_API_URL=https://pokeapi.co/api/v2
+      - REDIS_URL=redis://:pokemon@redis:6379
+
+    volumes:
+      - ./api:/app
+      - /app/node_modules
+    depends_on:
+      - redis
+    command: ["npm", "run", "dev"]
+
+  web:
+    build: ./web
+    container_name: "pokemon-web"
+    ports:
+      - "3000:3000"
+    environment:
+      - REACT_APP_POKE_API_URL=http://localhost:4000/api
+    volumes:
+      - ./web:/app
+      - /app/node_modules
+    depends_on:
+      - api
+    command: ["npm", "start"]
